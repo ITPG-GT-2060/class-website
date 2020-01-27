@@ -1,0 +1,105 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ITPG-GT.2060 — In and Out of Reality</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico'>
+</head>
+
+<body>
+	<div id="progressbar"></div>
+    <nav class="navbar navbar-dark bg-dark">
+        <!-- <a class="navbar-brand" href="#"><img src="images/logo/oculus_logo.png" alt="logo" width="80"></a> -->
+    </nav>
+
+	<button type="button" class="btnScreenToggle btnFullscreen-icon"  id="btnFullscreen"></button>
+
+    <div class="container">
+        <!-- <h1>Progressbar Demo</h1> -->
+		<div>
+	        <p>
+	            There is a substantial gap between what augmented and virtual reality is capable of today and the future that enthusiasts envision. The hardware is progressing, yet there are lack of 			design tools and methodologies. Effective augmented and virtual reality games and experience require good storytelling, animation, production and solid graphics. Students will learn a 			myriad of processes including spatial interface design, volumetric capture, working with spatial audio, porting animations and game programming. This course presumes no prior knowledge 			and is intended to embolden students to pursue a career in spatial computing.
+	        </p>
+	        <div class="button-links">
+		        <a href="https://docs.google.com/document/d/1vjngbKg_cTAVn-kO1md0zh28_ndwCRl9P_TGWcgIME8/edit?usp=sharing" class="btn">Syllabus</a>
+		        <a href="https://discordapp.com/channels/661938594931539968/661938594931539971" class="btn">Discord</a>	
+
+<!-- 		        		        <a href="https://docs.google.com/document/d/1vjngbKg_cTAVn-kO1md0zh28_ndwCRl9P_TGWcgIME8/edit?usp=sharing" class="btn btn-primary" onClick="progressBar.progressBarStart(); ">Syllabus</a>
+		        <a href="https://discordapp.com/channels/661938594931539968/661938594931539971" class="btn btn-danger" onClick="progressBar.progressBarStop(); ">Discord</a>	        	
+ -->
+	        </div>
+
+	    </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="image-box">
+                <img src="images/logo/oculus_logo.png" alt="logo">
+            </div>
+            <div class="image-box">
+                <img src="images/logo/2018_NewsHome_NYU.png" alt="logo">
+            </div>
+            <div class="image-box">
+                <img src="images/logo/itp_logo.png" alt="logo">
+            </div>
+            <div class="image-box">
+                <img src="images/logo/ML_Horizontal_White_Black_BG.png" alt="logo">
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46156385-1', 'cssscript.com');
+        ga('send', 'pageview');
+
+	        var btnFullscreen = document.getElementById('btnFullscreen');
+			var documentElem = document.documentElement;
+
+	        btnFullscreen.addEventListener('click', function () {
+				  if (document.exitFullscreen) {
+				    document.exitFullscreen();
+				  } else if (document.mozCancelFullScreen) { /* Firefox */
+				    document.mozCancelFullScreen();
+				  } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+				    document.webkitExitFullscreen();
+				  } else if (document.msExitFullscreen) { /* IE/Edge */
+				    document.msExitFullscreen();
+				  }
+
+				  if (documentElem.requestFullscreen) {
+				    documentElem.requestFullscreen();
+				  } else if (documentElem.mozRequestFullScreen) { /* Firefox */
+				    documentElem.mozRequestFullScreen();
+				  } else if (documentElem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+				    documentElem.webkitRequestFullscreen();
+				  } else if (documentElem.msRequestFullscreen) { /* IE/Edge */
+				    documentElem.msRequestFullscreen();
+				  } 
+				  // alert('on');
+  				  btnFullscreen.classList.toggle("btnFullscreen-icon");				    
+  				  btnFullscreen.classList.toggle("btnMinimize-icon");				    
+	        });
+
+
+    </script>
+</body>
+
+</html>

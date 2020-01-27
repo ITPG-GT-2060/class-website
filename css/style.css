@@ -1,0 +1,173 @@
+
+        html {
+            -webkit-box-sizing: border-box;
+            -box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        * {
+            -webkit-box-sizing: border-box !important;
+            -box-sizing: border-box !important;
+            -moz-box-sizing: border-box !important;            
+        }        
+
+        body { 
+            text-align:center; 
+            background-color: black;
+        }
+
+        button:hover, a:hover {
+            cursor: pointer;
+        }
+
+        .container { 
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            overflow: auto;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .footer {
+			margin-bottom: 0px;
+        }
+    
+
+        p, h1 {
+            font-family: 'gothamlight' !important;
+            color: white;
+            text-align: justify;
+			line-height: 1.75;
+			color: white;
+        }
+        
+        p {
+            font-size: 15px;
+            color: #fff;
+        }
+
+        .button-links {
+            display: flex;
+            width : 100%;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+
+        .button-links .btn {
+            display: block;
+            flex: 1;
+			color: white;
+            font-family: 'gothamlight' !important;
+		    padding: 10px;
+			background: none;
+			text-transform: uppercase;
+            margin-right: 10px;		
+            margin-left: 10px;     
+            background-color: transparent;
+            font-size: 10px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-decoration: none !important;	
+            outline: 0 !important;
+            margin-top: 16px;
+            transition: all ease-in-out .3s;
+        }
+      
+        .button-links .btn:hover {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-box {
+            width: 120px;
+            margin: 0 auto;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .image-box img {
+            max-width: 100%;
+        }
+
+
+        #progressbar {
+            height: 3px;
+            width: 3px;
+            background: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            animation: progressBar 5s ease-out;
+        }
+
+        @keyframes progressBar {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+    
+
+        .btnScreenToggle {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            display: block;
+            height: 17px; 
+            width: 17px;
+            color: #fff;
+            background-color: transparent !important;
+            border: none !important;
+            outline: 0 !important;
+            transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+        }
+
+
+       .btnScreenToggle.btnFullscreen-icon {
+            background-image: url(images/Full-screen.png) !important;
+            background-size: cover;
+            background-repeat: no-repeat;
+       }
+
+       .btnScreenToggle.btnMinimize-icon {
+            background-image: url(images/minimize.png) !important;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                height: calc(100vh - 100px);
+            }
+ 
+            .footer {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+
+            .button-links {
+                display: flex;
+                width : 240px;
+                max-width: 100%;
+                flex-direction: row;
+                margin: 0 auto;
+            }
+            .button-links {
+                margin-bottom: 0 !Important;
+            }
+
+        }
